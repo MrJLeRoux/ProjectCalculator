@@ -27,6 +27,7 @@ namespace ProjectCalculator
         private NumButton subtractButton;
         private NumButton multiplyButton;
         private NumButton divideButton;
+        private NumButton decimalButton;
         private EqualsButton equalsButton;
         private ClearButton clearButton;
 
@@ -46,6 +47,7 @@ namespace ProjectCalculator
             subtractButton = new NumButton(this, " - ");
             multiplyButton = new NumButton(this, " * ");
             divideButton = new NumButton(this, " / ");
+            decimalButton = new NumButton(this, ".");
             equalsButton = new EqualsButton(this);
             clearButton = new ClearButton(this);
         }
@@ -206,6 +208,16 @@ namespace ProjectCalculator
             set
             {
                 divideButton = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public NumButton DecimalButton
+        {
+            get => decimalButton;
+            set
+            {
+                decimalButton = value;
                 OnPropertyChanged();
             }
         }

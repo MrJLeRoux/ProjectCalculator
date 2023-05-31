@@ -49,6 +49,7 @@
                     <Button Content="9" Command="{Binding NineButton}" Height="40" Width="40" Margin="10"/>
                     <Button Content="6" Command="{Binding SixButton}" Height="40" Width="40" Margin="10"/>
                     <Button Content="3" Command="{Binding ThreeButton}" Height="40" Width="40" Margin="10"/>
+                    <Button Content="." Command="{Binding DecimalButton}" Height="40" Width="40" Margin="10"/>
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="4">
