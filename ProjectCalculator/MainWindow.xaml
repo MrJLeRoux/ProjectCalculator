@@ -6,6 +6,22 @@
         xmlns:local="clr-namespace:ProjectCalculator"
         mc:Ignorable="d" ResizeMode="NoResize"
         Title="MainWindow" Height="450" Width="390">
+    
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+        <Style TargetType="StackPanel">
+            <Setter Property="Height" Value="300"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="4"/>
+            <Setter Property="TextAlignment" Value="Right"/>
+        </Style>
+    </Window.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
@@ -13,10 +29,10 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="{Binding CalcScreen, Mode=TwoWay, IsAsync=True}" Margin="10" FontSize="30" TextAlignment="Right"/>
+        <TextBlock Text="{Binding CalcScreen}" FontSize="30"/>
 
         <Grid Grid.Row="1">
-            <TextBlock Text="{Binding SubScreen}" Margin="4" FontSize="15" TextAlignment="Right"/>
+            <TextBlock Text="{Binding SubScreen}" FontSize="15"/>
         </Grid>
 
         <Grid Grid.Row="2">
@@ -30,40 +46,40 @@
             </Grid.ColumnDefinitions>
 
             <Grid Grid.Column="0">
-                <StackPanel Height="300">
-                    <Button Content="7" Command="{Binding SevenButton}" Height="40" Width="40" Margin="10"/>
-                    <Button Content="4" Command="{Binding FourButton}" Height="40" Width="40" Margin="10"/>
-                    <Button Content="1" Command="{Binding OneButton}" Height="40" Width="40" Margin="10"/>
+                <StackPanel>
+                    <Button Content="7" Command="{Binding SevenButton}"/>
+                    <Button Content="4" Command="{Binding FourButton}"/>
+                    <Button Content="1" Command="{Binding OneButton}"/>
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="1">
-                <StackPanel Height="300">
-                    <Button Content="8" Command="{Binding EightButton}" Height="40" Width="40" Margin="10"/>
-                    <Button Content="5" Command="{Binding FiveButton}" Height="40" Width="40" Margin="10"/>
-                    <Button Content="2" Command="{Binding TwoButton}" Height="40" Width="40" Margin="10"/>
-                    <Button Content="0" Command="{Binding ZeroButton}" Height="40" Width="40" Margin="10"/>
+                <StackPanel>
+                    <Button Content="8" Command="{Binding EightButton}"/>
+                    <Button Content="5" Command="{Binding FiveButton}"/>
+                    <Button Content="2" Command="{Binding TwoButton}"/>
+                    <Button Content="0" Command="{Binding ZeroButton}"/>
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="2">
-                <StackPanel Height="300">
-                    <Button Content="9" Command="{Binding NineButton}" Height="40" Width="40" Margin="10"/>
-                    <Button Content="6" Command="{Binding SixButton}" Height="40" Width="40" Margin="10"/>
-                    <Button Content="3" Command="{Binding ThreeButton}" Height="40" Width="40" Margin="10"/>
-                    <Button Content="." Command="{Binding DecimalButton}" Height="40" Width="40" Margin="10"/>
+                <StackPanel>
+                    <Button Content="9" Command="{Binding NineButton}"/>
+                    <Button Content="6" Command="{Binding SixButton}"/>
+                    <Button Content="3" Command="{Binding ThreeButton}"/>
+                    <Button Content="." Command="{Binding DecimalButton}"/>
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="4">
-                <StackPanel Height="300">
-                    <Button Content="+" Command="{Binding AddButton}" Height="40" Width="40" Margin="10"/>
-                    <Button Content="-" Command="{Binding SubtractButton}" Height="40" Width="40" Margin="10"/>
+                <StackPanel>
+                    <Button Content="+" Command="{Binding AddButton}"/>
+                    <Button Content="-" Command="{Binding SubtractButton}"/>
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="5">
-                <StackPanel Height="300">
-                    <Button Content="X" Command="{Binding MultiplyButton}" Height="40" Width="40" Margin="10"/>
-                    <Button Content="/" Command="{Binding DivideButton}" Height="40" Width="40" Margin="10"/>
-                    <Button Content="CE" Command="{Binding ClearButton}" Height="40" Width="40" Margin="10"/>
-                    <Button Content="=" Command="{Binding EqualsButton}" Height="70" Width="40" Margin="10,40,10,10"/>
+                <StackPanel>
+                    <Button Content="X" Command="{Binding MultiplyButton}"/>
+                    <Button Content="/" Command="{Binding DivideButton}"/>
+                    <Button Content="CE" Command="{Binding ClearButton}"/>
+                    <Button Content="=" Command="{Binding EqualsButton}"/>
                 </StackPanel>
             </Grid>
         </Grid>
