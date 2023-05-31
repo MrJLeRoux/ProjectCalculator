@@ -62,7 +62,7 @@
                     <Button Content="X" Command="{Binding MultiplyButton}" Height="40" Width="40" Margin="10"/>
                     <Button Content="/" Command="{Binding DivideButton}" Height="40" Width="40" Margin="10"/>
                     <Button Content="CE" Command="{Binding ClearButton}" Height="40" Width="40" Margin="10"/>
-                    <Button Content="=" Command="{Binding EqualsButton}" Height="40" Width="40" Margin="10,70,10,10"/>
+                    <Button Content="=" Command="{Binding EqualsButton}" Height="70" Width="40" Margin="10,40,10,10"/>
                 </StackPanel>
             </Grid>
         </Grid>
