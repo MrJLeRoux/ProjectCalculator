@@ -243,7 +243,7 @@ namespace ProjectCalculator
 
         public void computeString()
         {
-            string calcString = calcScreen;
+            string calcString = CalcScreen;
             DataTable dataTable = new DataTable();
             bool success;
             object answer;
@@ -251,6 +251,7 @@ namespace ProjectCalculator
             {
                 answer = dataTable.Compute(calcString, "");
                 CalcScreen = answer.ToString();
+                SubScreen = calcString;
                 success = true;
             }
             catch
@@ -259,7 +260,8 @@ namespace ProjectCalculator
             }
             if (!success)
             {
-                CalcScreen = "Error!";
+                SubScreen = "Error!";
+                CalcScreen = String.Empty;
             }
         }
 
